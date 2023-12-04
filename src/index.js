@@ -84,4 +84,6 @@ function knightMoves(startCoor, targetCoor) {
   }
 }
 
+window.knightMoves = knightMoves;
+
 knightMoves([3, 3], [4, 3]);
