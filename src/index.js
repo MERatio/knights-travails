@@ -73,7 +73,15 @@ function getFastestPath(startCoor, targetCoor) {
 
 function knightMoves(startCoor, targetCoor) {
   const fastestPath = getFastestPath(startCoor, targetCoor);
-  return fastestPath;
+  const pathLength = fastestPath.length - 1;
+  console.log(
+    `=> You made it in ${pathLength} ${
+      pathLength > 0 ? "moves" : "move"
+    }!  Here's your path:`,
+  );
+  for (const path of fastestPath) {
+    console.log(`  [${path}]`);
+  }
 }
 
-console.log(knightMoves([3, 3], [4, 3]));
+knightMoves([3, 3], [4, 3]);
